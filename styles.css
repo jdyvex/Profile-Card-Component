@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+  --Dark-gray-alt: hsla(0, 0%, 59%, 0.4);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  background-color: var(--Dark-cyan);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-pattern-top {
+  position: absolute;
+  background: url("./images/bg-pattern-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 978px;
+  width: 978px;
+  top: -528px;
+  left: -284px;
+}
+
+.bg-pattern-bottom {
+  position: absolute;
+  background: url("./images/bg-pattern-bottom.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 978px;
+  width: 978px;
+  bottom: -628px;
+  right: -250px;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  height: 376px;
+  width: 350px;
+  z-index: 69;
+  position: relative;
+}
+
+.card .card-top {
+  height: 142px;
+  background: url("images/bg-pattern-card.svg");
+  border-radius: 1rem 1rem 0 0;
+}
+
+.profile .profile-pic {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  padding: 5px;
+  top: 94px;
+  background: white;
+}
+
+.profile .profile-pic img {
+  border-radius: 50%;
+}
+
+.profile-info {
+  margin-top: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--Dark-gray-alt);
+  padding-bottom: 25px;
+}
+
+.profile .name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--Dark-grayish-blue);
+}
+
+.profile .name span {
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+  padding-right: 4px;
+}
+
+.profile .location {
+  color: var(--Dark-grayish-blue);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 23px;
+  text-align: center;
+}
+
+.stats .number {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.stats p {
+  color: var(--Dark-grayish-blue);
+}
+
+.stats .label {
+  font-size: 10px;
+  letter-spacing: 0.1rem;
+}
+
+/* ================= Media Query ================= */
+@media (max-width: 375px) {
+  .bg-pattern-top {
+    height: 375px;
+    width: 375px;
+    top: -160px;
+    left: -165px;
+  }
+
+  .bg-pattern-bottom {
+    height: 375px;
+    width: 375px;
+    bottom: -160px;
+    right: -165px;
+  }
+}
